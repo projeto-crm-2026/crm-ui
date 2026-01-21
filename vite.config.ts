@@ -1,11 +1,10 @@
 import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react-swc'
-import dts from 'vite-plugin-dts'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
@@ -14,7 +13,12 @@ export default defineConfig({
       insertTypesEntry: true,
       rollupTypes: true,
       include: ['src/**/*'],
-      exclude: ['**/*.test.ts', '**/*.test.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
+      exclude: [
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/*.spec.ts',
+        '**/*.spec.tsx'
+      ],
       outDir: 'dist',
       tsconfigPath: './tsconfig.app.json'
     })
@@ -42,10 +46,7 @@ export default defineConfig({
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'react/jsx-runtime'
         },
-        assetFileNames: assetInfo => {
-          if (assetInfo.name === 'style.css') return 'style.css'
-          return assetInfo.name || ''
-        }
+        inlineDynamicImports: false
       }
     },
     cssCodeSplit: false,

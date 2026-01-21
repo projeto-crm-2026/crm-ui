@@ -20,14 +20,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/crm-ui.es.js",
       "require": "./dist/crm-ui.cjs.js"
-    },
-    "./styles": {
-      "default": "./dist/crm-project-ui.css"
     }
   },
   "sideEffects": [
     "**/*.css",
-    "./dist/crm-ui.css",
+    "./dist/**/*.css",
     "./src/assets/global.css"
   ],
   "files": [
