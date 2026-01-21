@@ -11,30 +11,44 @@
     "components",
     "crm"
   ],
-  "type": "module",
-  "main": "./dist/crm-ui.cjs.js",
-  "module": "./dist/crm-ui.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/crm-ui.es.js",
-      "require": "./dist/crm-ui.cjs.js"
-    }
-  },
-  "sideEffects": [
-    "**/*.css",
-    "./dist/**/*.css",
-    "./src/assets/global.css"
-  ],
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    },
+    "./index.css": {
+      "import": "./src/assets/global.css",
+      "default": "./src/assets/global.css"
+    }
+  },
+  "publishConfig": {
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.ts",
+        "require": "./dist/index.js",
+        "import": "./dist/index.mjs"
+      },
+      "./index.css": {
+        "import": "./dist/index.css",
+        "default": "./dist/index.css"
+      }
+    }
+  },
+  "sideEffects": false,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "build": "tsup",
     "lint": "eslint .",
-    "preview": "vite preview",
+    "test": "vitest run --browser.headless",
     "test:watch": "vitest",
     "test:watch:headless": "vitest --browser.headless"
   },
