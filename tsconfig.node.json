@@ -9,5 +9,5 @@
     "strict": true,
     "types": ["node"]
   },
-  "include": ["vite.config.ts", "tsup.config.ts"]
+  "include": ["tsup.config.ts"]
 }
