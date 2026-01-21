@@ -1,7 +1,7 @@
 {
   "name": "crm-project-ui",
   "private": false,
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "UI Component Library for CRM",
   "author": "Vitor Gabriel Silva <vitorgabrielsbo1460@gmail.com>",
   "license": "MIT",
