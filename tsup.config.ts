@@ -1,16 +1,12 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: [
-    'src/**/*.ts',
-    'src/**/*.tsx',
-    '!src/**/*.test.ts',
-    '!src/**/*.test.tsx',
-    '!src/**/*.spec.ts',
-    '!src/**/*.spec.tsx'
-  ],
+  entry: ['src/index.ts'],
+
   format: ['esm', 'cjs'],
   dts: true,
+  tsconfig: './tsconfig.app.json',
+
   splitting: true,
   sourcemap: true,
   clean: true,
@@ -30,6 +26,9 @@ export default defineConfig({
     const distCss = path.join(process.cwd(), 'dist/index.css')
 
     if (fs.existsSync(srcCss)) {
+      if (!fs.existsSync(path.dirname(distCss))) {
+        fs.mkdirSync(path.dirname(distCss), { recursive: true })
+      }
       fs.copyFileSync(srcCss, distCss)
     }
   }
