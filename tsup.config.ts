@@ -1,8 +1,11 @@
+import autoprefixer from 'autoprefixer'
 import fs from 'node:fs'
 import path from 'node:path'
 import postcss from 'postcss'
 import postcssImport from 'postcss-import'
 import { defineConfig } from 'tsup'
+
+import tailwindcss from '@tailwindcss/postcss'
 
 export default defineConfig({
   entry: ['src/index.ts'],
@@ -30,7 +33,11 @@ export default defineConfig({
 
       const cssContent = fs.readFileSync(srcCssPath, 'utf8')
 
-      const result = await postcss([postcssImport()]).process(cssContent, {
+      const result = await postcss([
+        postcssImport(),
+        tailwindcss(),
+        autoprefixer()
+      ]).process(cssContent, {
         from: srcCssPath,
         to: distCssPath
       })
