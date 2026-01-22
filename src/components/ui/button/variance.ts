@@ -100,6 +100,7 @@ export const buttonVariants = cva(
           'px-6',
           'w-full'
         ],
+        ghost: [],
         link: [
           'text-neutral-700',
           'bg-transparent',

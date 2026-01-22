@@ -12,6 +12,7 @@ export interface ButtonProps
   icon?: React.JSX.Element
   isLoading?: boolean
   prefetch?: boolean
+  ref?: any
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target']
 }
 

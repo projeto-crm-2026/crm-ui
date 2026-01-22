@@ -12,15 +12,17 @@ import {
   getDefaultClassNames
 } from 'react-day-picker'
 
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+
+import { buttonVariants } from '../button/variance'
 
 function Calendar({
   className,
   classNames,
   showOutsideDays = true,
   captionLayout = 'label',
-  buttonVariant = 'ghost',
+  buttonVariant = 'ghostWhite',
   formatters,
   components,
   ...props
@@ -32,7 +34,7 @@ function Calendar({
   return (
     <DayPicker
       className={cn(
-        'bg-background group/calendar p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent',
+        'bg-background group/calendar p-3 [--cell-size:--spacing(8)] in-data-[slot=card-content]:bg-transparent in-data-[slot=popover-content]:bg-transparent',
         String.raw`rtl:**:[.rdp-button\_next>svg]:rotate-180`,
         String.raw`rtl:**:[.rdp-button\_previous>svg]:rotate-180`,
         className
@@ -210,8 +212,7 @@ function CalendarDayButton({
       data-range-middle={modifiers.range_middle}
       data-range-start={modifiers.range_start}
       ref={ref}
-      size="icon"
-      variant="ghost"
+      variant="ghostWhite"
       {...props}
     />
   )
