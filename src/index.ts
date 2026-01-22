@@ -42,6 +42,11 @@ export * from './components/ui/toggle'
 export * from './components/ui/toggle-group'
 export * from './components/ui/tooltip'
 export * from './components/ui/table'
+export * from './components/ui/spin'
+
+export * from './components/shared/circle-button'
+export * from './components/shared/hamburger-button'
+export * from './components/shared/modal'
 
 export * from './lib/utils'
 
@@ -49,3 +54,6 @@ export * from './hooks/use-auto-focus'
 export * from './hooks/use-mobile'
 export * from './hooks/use-shortcuts'
 export * from './hooks/use-uid'
+
+export * from './types/button-copy'
+export * from './types/icon-props'
