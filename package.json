@@ -20,10 +20,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": {
-        "import": "./dist/index.d.ts",
-        "require": "./dist/index.d.cts"
-      },
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
@@ -36,30 +33,6 @@
       "import": "./dist/tailwind/preset.js",
       "require": "./dist/tailwind/preset.cjs",
       "types": "./dist/tailwind/preset.d.ts"
-    }
-  },
-  "publishConfig": {
-    "main": "./dist/index.cjs",
-    "module": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "exports": {
-      ".": {
-        "types": {
-          "import": "./dist/index.d.ts",
-          "require": "./dist/index.d.cts"
-        },
-        "import": "./dist/index.js",
-        "require": "./dist/index.cjs"
-      },
-      "./index.css": {
-        "import": "./dist/index.css",
-        "default": "./dist/index.css"
-      },
-      "./tailwind-preset": {
-        "import": "./dist/tailwind/preset.js",
-        "require": "./dist/tailwind/preset.cjs",
-        "types": "./dist/tailwind/preset.d.ts"
-      }
     }
   },
   "sideEffects": [
