@@ -22,7 +22,7 @@ function Calendar({
   classNames,
   showOutsideDays = true,
   captionLayout = 'label',
-  buttonVariant = 'ghostWhite',
+  buttonVariant = 'ghost',
   formatters,
   components,
   ...props
@@ -212,7 +212,7 @@ function CalendarDayButton({
       data-range-middle={modifiers.range_middle}
       data-range-start={modifiers.range_start}
       ref={ref}
-      variant="ghostWhite"
+      variant="ghost"
       {...props}
     />
   )
