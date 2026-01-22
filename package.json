@@ -49,6 +49,11 @@
       "./index.css": {
         "import": "./dist/index.css",
         "default": "./dist/index.css"
+      },
+      "./tailwind-preset": { 
+        "import": "./dist/tailwind/preset.js",
+        "require": "./dist/tailwind/preset.cjs",
+        "types": "./dist/tailwind/preset.d.ts"
       }
     }
   },

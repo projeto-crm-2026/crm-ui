@@ -8,7 +8,7 @@ import { defineConfig } from 'tsup'
 import tailwindcss from '@tailwindcss/postcss'
 
 export default defineConfig({
-  entry: ['src/index.ts'],
+  entry: ['src/index.ts', 'src/tailwind/preset.ts'],
   format: ['esm', 'cjs'],
   dts: true,
   tsconfig: './tsconfig.app.json',
