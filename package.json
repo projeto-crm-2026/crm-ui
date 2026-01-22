@@ -60,9 +60,7 @@
     "lint": "eslint .",
     "test": "vitest run --browser.headless",
     "test:watch": "vitest",
-    "test:watch:headless": "vitest --browser.headless",
-    "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "test:watch:headless": "vitest --browser.headless"
   },
   "peerDependencies": {
     "react": "^19.0.0 || ^18.0.0",
@@ -71,12 +69,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@storybook/addon-essentials": "^8.x",
-    "@storybook/addon-interactions": "^8.x",
-    "@storybook/addon-links": "^8.x",
-    "@storybook/react": "^8.x",
-    "@storybook/react-vite": "^8.x",
-    "@storybook/test": "^8.6.15",
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^24.10.1",
     "@types/postcss-import": "^14.0.3",
@@ -104,7 +96,6 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react-dom": "^19.2.0",
-    "storybook": "^8.x",
     "tailwindcss": "^4",
     "tsup": "^8.5.1",
     "typescript": "~5.9.3",
