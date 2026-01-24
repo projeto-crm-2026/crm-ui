@@ -39,11 +39,11 @@ export const buttonVariants = cva(
         outlineWhite: [
           'font-medium',
           'border',
-          'border-neutral-50',
+          'border-slate-50',
           'bg-transparent',
-          'text-neutral-50',
+          'text-slate-50',
           'lg:hover:text-foreground',
-          'lg:hover:bg-neutral-50',
+          'lg:hover:bg-slate-50',
           'flex',
           'font-normal',
           'py-2',
@@ -67,9 +67,9 @@ export const buttonVariants = cva(
         outlineDark: [
           'font-medium',
           'border',
-          'border-neutral-400',
-          'lg:hover:bg-neutral-50',
-          'text-neutral-500',
+          'border-slate-400',
+          'lg:hover:bg-slate-50',
+          'text-slate-500',
           'flex',
           'font-normal',
           'py-2',
@@ -91,10 +91,10 @@ export const buttonVariants = cva(
         ghostDark: [
           'font-medium',
           'bg-transparent',
-          'text-foreground',
+          'text-slate-500',
           'border',
-          'border-foreground',
-          'lg:hover:bg-neutral-50',
+          'border-slate-500',
+          'lg:hover:bg-slate-50',
           'flex',
           'font-normal',
           'py-2',
@@ -109,7 +109,7 @@ export const buttonVariants = cva(
           'border-foreground',
           'flex',
           'font-normal',
-          'lg:hover:bg-neutral-50',
+          'lg:hover:bg-slate-50',
           'py-2',
           'px-6',
           'w-full'
@@ -127,20 +127,20 @@ export const buttonVariants = cva(
           'rounded-sm',
           'p-1.5',
           'duration-default',
-          'text-neutral-400',
-          'lg:hover:bg-neutral-100'
+          'text-slate-400',
+          'lg:hover:bg-slate-100'
         ],
         onlyIconDark: [
           'rounded-sm',
           'p-1.5',
           'duration-default',
-          'lg:hover:bg-neutral-600'
+          'lg:hover:bg-slate-600'
         ],
         onlyIconPrimary: [
           'rounded-sm',
           'p-1.5',
           'duration-default',
-          'text-neutral-50',
+          'text-slate-50',
           'bg-blue-500',
           'lg:hover:brightness-125'
         ]
