@@ -91,9 +91,7 @@ export const buttonVariants = cva(
         ghostDark: [
           'font-medium',
           'bg-transparent',
-          'text-slate-500',
-          'border',
-          'border-slate-500',
+          'text-foreground',
           'lg:hover:bg-slate-50',
           'flex',
           'font-normal',
