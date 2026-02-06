@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 import plugin from 'tailwindcss/plugin'
 
 const preset: Config = {
+  content: ['./src/**/*.{ts,tsx}', './dist/**/*.{js,ts}', './**/*.{ts,tsx,js}'],
   darkMode: ['class', 'dark'],
   theme: {
     extend: {
